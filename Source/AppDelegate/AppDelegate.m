@@ -9,7 +9,6 @@
 
 @interface AppDelegate()
 
-@property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong) AppRouter *router;
 
 @end
