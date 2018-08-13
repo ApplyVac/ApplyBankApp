@@ -23,21 +23,21 @@
 #PRAGMA MARK: INIT
 
 - (instancetype)initWithJson:(NSDictionary *)json {
-	self = [super init];
-	self.dateString = json[Api.keyDate];
-	self.cities = [City makeCities:json[Api.keyCities]];
-	self.banks = [Bank makeBanks:json[Api.keyOrganizations]];
-	return self;
+  self = [super init];
+  self.dateString = json[Api.keyDate];
+  self.cities = [City makeCities:json[Api.keyCities]];
+  self.banks = [Bank makeBanks:json[Api.keyOrganizations]];
+  return self;
 }
 
 #PRAGMA MARK: ACCESSOR
 
 - (NSArray<Bank *> *)banksForCityId:(NSString *)cityId {
-	NSArray<Bank *> *output = @[].mutableCopy;
-	for (Bank *bank in self.banks) {
-		if ([bank.cityId isEqualToString:cityId]) { [output addObject:bank]; }
-	}
-	return output;
+  NSArray<Bank *> *output = @[].mutableCopy;
+  for (Bank *bank in self.banks) {
+    if ([bank.cityId isEqualToString:cityId]) { [output addObject:bank]; }
+  }
+  return output;
 }
 
 @end

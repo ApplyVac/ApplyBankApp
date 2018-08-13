@@ -20,10 +20,10 @@
 #PRAGMA MARK: APP DELEGATE PROTOCOL
 
 - (BOOL)application:(UIApplication *)app didFinishLaunchingWithOptions:(NSDictionary *)args {
-	self.window = [[UIWindow alloc] initWithFrame:Ui.fullBounds];
-	self.router = [[AppRouter alloc] initWithWindow:self.window];
-	[self.router start];
-	return YES;
+  self.window = [[UIWindow alloc] initWithFrame:Ui.fullBounds];
+  self.router = [[AppRouter alloc] initWithWindow:self.window];
+  [self.router start];
+  return YES;
 }
 
 @end

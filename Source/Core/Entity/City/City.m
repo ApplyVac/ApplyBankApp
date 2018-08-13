@@ -16,20 +16,20 @@
 #PRAGMA MARK: INIT
 
 - (instancetype)initWithId:(NSString *)identifier title:(NSString *)title {
-	self = [super init];
-	self.identifier = identifier;
-	self.title = title;
-	return self;
+  self = [super init];
+  self.identifier = identifier;
+  self.title = title;
+  return self;
 }
 
 #PRAGMA MARK: STATIC
 
 + (NSArray<City *> *)makeCities:(NSDictionary *)json {
-	NSMutableArray<City *> *output = @[].mutableCopy;
-	for (NSString *key in json.allKeys) {
-		[output addObject:[[City alloc] initWithId:key title:json[key]]];
-	}
-	return output;
+  NSMutableArray<City *> *output = @[].mutableCopy;
+  for (NSString *key in json.allKeys) {
+    [output addObject:[[City alloc] initWithId:key title:json[key]]];
+  }
+  return output;
 }
 
 @end
