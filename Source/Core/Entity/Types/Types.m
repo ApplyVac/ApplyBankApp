@@ -34,19 +34,19 @@
   return self;
 }
 
-#PRAGMA MARK: ACCESSORS
+#PRAGMA MARK: ACCESSOR
 
 - (NSString *)code {
   switch (self.type) {
     case LanguageTypeRu: return @"RU";
-    default:              return @"UA";
+    default:             return @"UA";
   }
 }
 
 - (NSString *)infoPath {
   switch (self.type) {
     case LanguageTypeRu: return Api.infoUrlRu;
-    default:              return Api.infoUrlUa;
+    default:             return Api.infoUrlUa;
   }
 }
 
