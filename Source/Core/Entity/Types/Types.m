@@ -78,21 +78,21 @@
 - (NSString *)symbol {
   switch (self.type) {
     case CurrencyTypeUsd: return @"$";
-    default:               return @"€";
+    default:              return @"€";
   }
 }
 
 - (NSString *)code {
   switch (self.type) {
     case CurrencyTypeUsd: return @"usd";
-    default:               return @"eur";
+    default:              return @"eur";
   }
 }
 
 - (NSString *)title {
   switch (self.type) {
-    case CurrencyTypeUsd: return @"ДОЛАР";
-    default:               return @"ЄВРО";
+    case CurrencyTypeUsd: return @"USD";
+    default:              return @"EUR";
   }
 }
 
