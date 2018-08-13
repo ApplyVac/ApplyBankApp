@@ -13,7 +13,7 @@
 + (NSString *)initialTitle {
   switch ([Language main].type) {
     case LanguageTypeRu: return @"Пожалуйста, выберите валюту.";
-    default:              return @"Будь-ласка, оберіть валюту.";
+    default:             return @"Будь-ласка, оберіть валюту.";
   }
 }
 
@@ -22,7 +22,7 @@
 + (NSString *)cityTitle {
   switch ([Language main].type) {
     case LanguageTypeRu: return @"Выберите город";
-    default:              return @"Оберіть місто";
+    default:             return @"Оберіть місто";
   }
 }
 
@@ -33,28 +33,28 @@
 + (NSString *)cityBestBid {
   switch ([Language main].type) {
     case LanguageTypeRu: return @"Лучшая цена покупки";
-    default:              return @"Краща ціна купівлі";
+    default:             return @"Краща ціна купівлі";
   }
 }
 
 + (NSString *)cityBestAsk {
   switch ([Language main].type) {
     case LanguageTypeRu: return @"Лучшая цена продажи";
-    default:              return @"Краща ціна продажу";
+    default:             return @"Краща ціна продажу";
   }
 }
 
 + (NSString *)cityAvgBid {
   switch ([Language main].type) {
     case LanguageTypeRu: return @"Средняя цена покупки";
-    default:              return @"Середня ціна купівлі";
+    default:             return @"Середня ціна купівлі";
   }
 }
 
 + (NSString *)cityAvgAsk {
   switch ([Language main].type) {
     case LanguageTypeRu: return @"Средняя цена продажи";
-    default:              return @"Середня ціна продажу";
+    default:             return @"Середня ціна продажу";
   }
 }
 
@@ -63,7 +63,7 @@
 + (NSString *)bankSortButton {
   switch ([Language main].type) {
     case LanguageTypeRu: return @"Сортировать";
-    default:              return @"Сортувати";
+    default:             return @"Сортувати";
   }
 }
 
