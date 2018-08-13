@@ -27,47 +27,47 @@ typedef CityViewController CityVc;
 #PRAGMA MARK: INIT
 
 - (instancetype)initWithWindow:(UIWindow *)window {
-	self = [super init];
-	self.window = window;
-	return self;
+  self = [super init];
+  self.window = window;
+  return self;
 }
 
 #PRAGMA MARK: PUBLIC
 
 - (void)start {
-	UIWindow *win = self.window;
-	win.backgroundColor = Ui.windowColor;
-	win.rootViewController = [Preferences makeDeserialized] ? self.makeRootVc : self.makeInitialVc;
-	[win makeKeyAndVisible];
+  UIWindow *win = self.window;
+  win.backgroundColor = Ui.windowColor;
+  win.rootViewController = [Preferences makeDeserialized] ? self.makeRootVc : self.makeInitialVc;
+  [win makeKeyAndVisible];
 }
 
 #PRAGMA MARK: INITIAL FLOW
 
 - (void)showInitial {
-	self.window.rootViewController = self.makeInitialVc;
+  self.window.rootViewController = self.makeInitialVc;
 }
 
 - (InitVc *)makeInitialVc {
-	InitVc *vc = [[InitVc alloc] initWithCurrencies:Currency.currencies];
-	__weak typeof(self) wself = self;
-	vc.callback = ^(InitVc *completeVc, Currency *currency){ [wself completeInitial:currency]; };
-	return vc;
+  InitVc *vc = [[InitVc alloc] initWithCurrencies:Currency.currencies];
+  __weak typeof(self) wself = self;
+  vc.callback = ^(InitVc *completeVc, Currency *currency){ [wself completeInitial:currency]; };
+  return vc;
 }
 
 - (void)completeInitial:(Currency *)currency {
-	Preferences *prefs = [Preferences makeDefault];
-	prefs.currency = currency;
-	[prefs serialize];
-	self.window.rootViewController = self.makeRootVc;
+  Preferences *prefs = [Preferences makeDefault];
+  prefs.currency = currency;
+  [prefs serialize];
+  self.window.rootViewController = self.makeRootVc;
 }
 
 #PRAGMA MARK: MAIN FLOW
 
 - (UINavigationController *)makeRootVc {
-	CityVc *vc = [[CityVc alloc] init];
-	__weak typeof(self) wself = self;
-	vc.currencyCompletion = ^(CityVc *cityVc){ [wself showInitial]; }
-	return [[UINavigationController alloc] initWithRootViewController:vc];
+  CityVc *vc = [[CityVc alloc] init];
+  __weak typeof(self) wself = self;
+  vc.currencyCompletion = ^(CityVc *cityVc){ [wself showInitial]; }
+  return [[UINavigationController alloc] initWithRootViewController:vc];
 }
 
 @end

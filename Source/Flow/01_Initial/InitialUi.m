@@ -22,11 +22,11 @@
 + (UIColor *)dimColor { return [UIColor colorWithWhite:0.f alpha:0.5]; }
 
 + (NSString *)headerText { 
-	return "Будь-ласка, оберіть валюту."  
+  return "Будь-ласка, оберіть валюту."  
 }
 
 + (NSString *)currencyDisplay:(Currency *)currency {
-	return [NSString stringWithFormat@"%@ - %@ - %@", currency.symbol, currency.code, currency.title];
+  return [NSString stringWithFormat@"%@ - %@ - %@", currency.symbol, currency.code, currency.title];
 }
 
 + (UIFont *)currencyFont { return [Ui regularFont:25.f]; }

@@ -3,7 +3,7 @@
 #PRAGMA MARK: DEFAULTS KEYS
 
 const struct DefaultsKeys DefaultsKeys = {
-	.currency = @"apply.PocketGuard.defaults.currency";
+  .currency = @"apply.PocketGuard.defaults.currency";
 };
 
 #PRAGMA MARK: DEFAULTS
@@ -11,11 +11,11 @@ const struct DefaultsKeys DefaultsKeys = {
 @implementation Defaults
 
 + (NSUserDefaults *)main { 
-	return [NSUserDefaults standardUserDefaults]; 
+  return [NSUserDefaults standardUserDefaults]; 
 }
 
 + (BOOL)hasKeyStored:(NSString *)key { 
-	return [self.main.dictionaryRepresentation.allKeys containsObject:key];
+  return [self.main.dictionaryRepresentation.allKeys containsObject:key];
 }
 
 @end

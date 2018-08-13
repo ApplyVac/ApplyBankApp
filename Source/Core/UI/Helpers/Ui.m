@@ -5,11 +5,11 @@
 @implementation Ui
 
 + (UICollectionView *)verticalCv {
-	UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
-	layout.scrollDirection = UICollectionViewScrollDirectionVertical;
-	layout.minimumLineSpacing = self.attach;
-	layout.minimumInteritemSpacing = self.attach;
-	return [[UICollectionView alloc] initWithFrame:CGRectZero layout:layout];
+  UICollectionViewLayout *layout = [[UICollectionViewLayout alloc] init];
+  layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+  layout.minimumLineSpacing = self.attach;
+  layout.minimumInteritemSpacing = self.attach;
+  return [[UICollectionView alloc] initWithFrame:CGRectZero layout:layout];
 }
 
 + (CGFloat)minA { return 1.f; }
