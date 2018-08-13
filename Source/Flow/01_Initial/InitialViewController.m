@@ -49,14 +49,14 @@ typedef InitialUi IUi;
 
 - (void)fadeIn:(void (^)(void))completion {
   [UIView animateWithDuration:IUi.fadeTime
-                     animations:^{ self.collectionView.alpha = Ui.maxA; }
-                     completion:^(BOOL end){ if (completion) { completion(); } }];
+                    animations:^{ self.collectionView.alpha = Ui.maxA; }
+                    completion:^(BOOL end){ if (completion) { completion(); } }];
 }
 
 - (void)fadeOut:(void (^)(void))completion {
   [UIView animateWithDuration:IUi.fadeTime
-                     animations:^{ self.collectionView.alpha = Ui.minA; }
-                     completion:^(BOOL end){ if (completion) { completion(); } }];
+                    animations:^{ self.collectionView.alpha = Ui.minA; }
+                    completion:^(BOOL end){ if (completion) { completion(); } }];
 }
 
 #PRAGMA MARK: COLLECTION VIEW DATA SOURCE

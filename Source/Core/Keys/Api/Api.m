@@ -14,7 +14,7 @@
 + (NSString *)keyId { return @"id"; }
 + (NSString *)keyTitle { return @"title"; }
 + (NSString *)keyCityId { return @"cityId"; }
-+ (NSString *)keyAddress { return @"address" }
++ (NSString *)keyAddress { return @"address"; }
 + (NSString *)keyPhone { return @"phone"; }
 + (NSString *)keyCurrencies { return @"currencies"; }
 
